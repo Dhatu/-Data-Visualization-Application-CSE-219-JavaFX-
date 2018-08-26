@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Dialog">
+  <ClassDiagramComponents>
+    <Interface name="Dialog" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="show" returnType="void" visibility="package">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="package">
+          <Argument type="Stage" name="owner"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

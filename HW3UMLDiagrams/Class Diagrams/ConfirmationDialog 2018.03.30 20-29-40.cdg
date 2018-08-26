@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ConfirmationDialog">
+  <ClassDiagramComponents>
+    <Class name="ConfirmationDialog" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="dialog" type="ConfirmationDialog" visibility="private" isStatic="true"/>
+        <Field name="confirmationMessage" type="Label" visibility="private"/>
+        <Field name="selectedOption" type="Option" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDialog" returnType="ConfirmationDialog" visibility="public" isStatic="true"/>
+        <Method name="setConfirmationMessage" returnType="void" visibility="private">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="Stage" name="owner"/>
+        </Method>
+        <Method name="show" returnType="void" visibility="public">
+          <Argument type="String" name="dialogTitle"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="getSelectedOption" returnType="Option" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="vilij.components.ConfirmationDialog" target="vilij.components.ConfirmationDialog" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dialog" source="vilij.components.ConfirmationDialog" target="vilij.components.ConfirmationDialog" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

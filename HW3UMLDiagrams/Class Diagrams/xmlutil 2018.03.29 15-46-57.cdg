@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="xmlutil">
+  <ClassDiagramComponents>
+    <Class name="InvalidXMLFileFormatException" package="xmlutil" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="xmlFileName" type="String" visibility="private" isFinal="true"/>
+        <Field name="xsdFileName" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="xmlFileName"/>
+          <Argument type="String" name="xsdFileName"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="XMLUtilities" package="xmlutil" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="SCHEMA_STANDARD_SPEC_URL" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="validateXML" returnType="boolean" visibility="public">
+          <Argument type="URL" name="xmlFilePath"/>
+          <Argument type="URL" name="xmlSchemapath"/>
+        </Method>
+        <Method name="loadXMLDocument" returnType="Document" visibility="public">
+          <Argument type="URL" name="xmlFileURL"/>
+          <Argument type="URL" name="schemaFileURL"/>
+        </Method>
+        <Method name="getNodeWithName" returnType="Node" visibility="public">
+          <Argument type="Document" name="doc"/>
+          <Argument type="String" name="tagName"/>
+        </Method>
+        <Method name="getTextData" returnType="String" visibility="public">
+          <Argument type="Document" name="doc"/>
+          <Argument type="String" name="tagName"/>
+        </Method>
+        <Method name="getChildrenWithName" returnType="List&lt;Node&gt;" visibility="public">
+          <Argument type="Node" name="parent"/>
+          <Argument type="String" name="tagName"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

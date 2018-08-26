@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="UIComponent">
+  <ClassDiagramComponents>
+    <Interface name="UIComponent" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="getPrimaryWindow" returnType="Stage" visibility="package"/>
+        <Method name="getPrimaryScene" returnType="Scene" visibility="package"/>
+        <Method name="getTitle" returnType="String" visibility="package"/>
+        <Method name="initialize" returnType="void" visibility="package"/>
+        <Method name="clear" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

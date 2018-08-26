@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="vilij.templates">
+  <ClassDiagramComponents>
+    <Class name="ApplicationTemplate" package="vilij.templates" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="manager" type="PropertyManager" visibility="public" isFinal="true"/>
+        <Field name="errorDialog" type="ErrorDialog" visibility="protected" isFinal="true"/>
+        <Field name="confirmationDialog" type="ConfirmationDialog" visibility="protected" isFinal="true"/>
+        <Field name="dataComponent" type="DataComponent" visibility="protected"/>
+        <Field name="uiComponent" type="UIComponent" visibility="protected"/>
+        <Field name="actionComponent" type="ActionComponent" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="dialogsAudit" returnType="void" visibility="protected">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="propertyAudit" returnType="boolean" visibility="protected"/>
+        <Method name="userInterfaceAudit" returnType="void" visibility="protected">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="loadProperties" returnType="boolean" visibility="public">
+          <Argument type="InitializationParams" name="propertyParam"/>
+        </Method>
+        <Method name="getDataComponent" returnType="DataComponent" visibility="public"/>
+        <Method name="getUIComponent" returnType="UIComponent" visibility="public"/>
+        <Method name="getActionComponent" returnType="ActionComponent" visibility="public"/>
+        <Method name="setDataComponent" returnType="void" visibility="public">
+          <Argument type="DataComponent" name="component"/>
+        </Method>
+        <Method name="setUIComponent" returnType="void" visibility="public">
+          <Argument type="UIComponent" name="component"/>
+        </Method>
+        <Method name="setActionComponent" returnType="void" visibility="public">
+          <Argument type="ActionComponent" name="component"/>
+        </Method>
+        <Method name="getDialog" returnType="Dialog" visibility="public">
+          <Argument type="Dialog.DialogType" name="dialogType"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UITemplate" package="vilij.templates" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="UI_NOT_INITIALIZABLE_FOR_TEMPLATES" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="workspace" type="Pane" visibility="protected"/>
+        <Field name="toolBar" type="ToolBar" visibility="protected"/>
+        <Field name="newiconPath" type="String" visibility="protected"/>
+        <Field name="printiconPath" type="String" visibility="protected"/>
+        <Field name="saveiconPath" type="String" visibility="protected"/>
+        <Field name="loadiconPath" type="String" visibility="protected"/>
+        <Field name="exiticonPath" type="String" visibility="protected"/>
+        <Field name="logoPath" type="String" visibility="protected"/>
+        <Field name="cssPath" type="String" visibility="protected"/>
+        <Field name="primaryStage" type="Stage" visibility="protected"/>
+        <Field name="primaryScene" type="Scene" visibility="protected"/>
+        <Field name="appPane" type="Pane" visibility="protected"/>
+        <Field name="newButton" type="Button" visibility="protected"/>
+        <Field name="saveButton" type="Button" visibility="protected"/>
+        <Field name="loadButton" type="Button" visibility="protected"/>
+        <Field name="exitButton" type="Button" visibility="protected"/>
+        <Field name="printButton" type="Button" visibility="protected"/>
+        <Field name="applicationTitle" type="String" visibility="protected"/>
+        <Field name="logo" type="Image" visibility="protected"/>
+        <Field name="windowWidth" type="int" visibility="protected"/>
+        <Field name="windowHeight" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrimaryWindow" returnType="Stage" visibility="public"/>
+        <Method name="getPrimaryScene" returnType="Scene" visibility="public"/>
+        <Method name="getTitle" returnType="String" visibility="public"/>
+        <Method name="initialize" returnType="void" visibility="public"/>
+        <Method name="setToolBar" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="setToolbarButton" returnType="Button" visibility="protected">
+          <Argument type="String" name="iconPath"/>
+          <Argument type="String" name="tooltip"/>
+          <Argument type="boolean" name="disabled"/>
+        </Method>
+        <Method name="setResourcePaths" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="setToolbarHandlers" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="setWindow" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="clear" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="vilij.templates.UITemplate" target="vilij.templates.ApplicationTemplate" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

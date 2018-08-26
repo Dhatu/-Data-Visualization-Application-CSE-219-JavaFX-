@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="vilij.settings">
+  <ClassDiagramComponents>
+    <Enum name="InitializationParams" package="vilij.settings" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Literals>
+        <Literal name="LOAD_ERROR_TITLE"/>
+        <Literal name="PROPERTIES_LOAD_ERROR_MESSAGE"/>
+        <Literal name="PROPERTIES_XML"/>
+        <Literal name="WORKSPACE_PROPERTIES_XML"/>
+        <Literal name="SCHEMA_DEFINITION"/>
+      </Literals>
+    </Enum>
+    <Enum name="PropertyTypes" package="vilij.settings" visibility="public" xPosition="278.0" yPosition="20.0">
+      <Literals>
+        <Literal name="WINDOW_WIDTH"/>
+        <Literal name="WINDOW_HEIGHT"/>
+        <Literal name="IS_WINDOW_RESIZABLE"/>
+        <Literal name="TITLE"/>
+        <Literal name="GUI_RESOURCE_PATH"/>
+        <Literal name="CSS_RESOURCE_PATH"/>
+        <Literal name="CSS_RESOURCE_FILENAME"/>
+        <Literal name="ICONS_RESOURCE_PATH"/>
+        <Literal name="NEW_ICON"/>
+        <Literal name="PRINT_ICON"/>
+        <Literal name="SAVE_ICON"/>
+        <Literal name="LOAD_ICON"/>
+        <Literal name="EXIT_ICON"/>
+        <Literal name="LOGO"/>
+        <Literal name="NEW_TOOLTIP"/>
+        <Literal name="PRINT_TOOLTIP"/>
+        <Literal name="SAVE_TOOLTIP"/>
+        <Literal name="LOAD_TOOLTIP"/>
+        <Literal name="EXIT_TOOLTIP"/>
+        <Literal name="NOT_SUPPORTED_FOR_TEMPLATE_ERROR_TITLE"/>
+        <Literal name="LOAD_ERROR_TITLE"/>
+        <Literal name="SAVE_ERROR_TITLE"/>
+        <Literal name="SAVE_ERROR_MSG"/>
+        <Literal name="LOAD_ERROR_MSG"/>
+        <Literal name="CLOSE_LABEL"/>
+        <Literal name="SAVE_WORK_TITLE"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ErrorDialog">
+  <ClassDiagramComponents>
+    <Class name="ErrorDialog" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="dialog" type="ErrorDialog" visibility="private" isStatic="true"/>
+        <Field name="errorMessage" type="Label" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDialog" returnType="ErrorDialog" visibility="public" isStatic="true"/>
+        <Method name="setErrorMessage" returnType="void" visibility="private">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="Stage" name="owner"/>
+        </Method>
+        <Method name="show" returnType="void" visibility="public">
+          <Argument type="String" name="errorDialogTitle"/>
+          <Argument type="String" name="errorMessage"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="vilij.components.ErrorDialog" target="vilij.components.ErrorDialog" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dialog" source="vilij.components.ErrorDialog" target="vilij.components.ErrorDialog" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

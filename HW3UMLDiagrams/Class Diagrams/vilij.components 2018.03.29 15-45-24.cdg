@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="vilij.components">
+  <ClassDiagramComponents>
+    <Interface name="ActionComponent" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="handleNewRequest" returnType="void" visibility="package"/>
+        <Method name="handleSaveRequest" returnType="void" visibility="package"/>
+        <Method name="handleLoadRequest" returnType="void" visibility="package"/>
+        <Method name="handleExitRequest" returnType="void" visibility="package"/>
+        <Method name="handlePrintRequest" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Class name="ConfirmationDialog" package="vilij.components" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="dialog" type="ConfirmationDialog" visibility="private" isStatic="true"/>
+        <Field name="confirmationMessage" type="Label" visibility="private"/>
+        <Field name="selectedOption" type="Option" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDialog" returnType="ConfirmationDialog" visibility="public" isStatic="true"/>
+        <Method name="setConfirmationMessage" returnType="void" visibility="private">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="Stage" name="owner"/>
+        </Method>
+        <Method name="show" returnType="void" visibility="public">
+          <Argument type="String" name="dialogTitle"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="getSelectedOption" returnType="Option" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="DataComponent" package="vilij.components" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Methods>
+        <Method name="loadData" returnType="void" visibility="package">
+          <Argument type="Path" name="dataFilePath"/>
+        </Method>
+        <Method name="saveData" returnType="void" visibility="package">
+          <Argument type="Path" name="dataFilePath"/>
+        </Method>
+        <Method name="clear" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Interface name="Dialog" package="vilij.components" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Methods>
+        <Method name="show" returnType="void" visibility="package">
+          <Argument type="String" name="title"/>
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="package">
+          <Argument type="Stage" name="owner"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Class name="ErrorDialog" package="vilij.components" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="dialog" type="ErrorDialog" visibility="private" isStatic="true"/>
+        <Field name="errorMessage" type="Label" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getDialog" returnType="ErrorDialog" visibility="public" isStatic="true"/>
+        <Method name="setErrorMessage" returnType="void" visibility="private">
+          <Argument type="String" name="message"/>
+        </Method>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="Stage" name="owner"/>
+        </Method>
+        <Method name="show" returnType="void" visibility="public">
+          <Argument type="String" name="errorDialogTitle"/>
+          <Argument type="String" name="errorMessage"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="UIComponent" package="vilij.components" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Methods>
+        <Method name="getPrimaryWindow" returnType="Stage" visibility="package"/>
+        <Method name="getPrimaryScene" returnType="Scene" visibility="package"/>
+        <Method name="getTitle" returnType="String" visibility="package"/>
+        <Method name="initialize" returnType="void" visibility="package"/>
+        <Method name="clear" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="dialog" source="vilij.components.ErrorDialog" target="vilij.components.ErrorDialog" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vilij.components.ConfirmationDialog" target="vilij.components.Dialog" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dialog" source="vilij.components.ConfirmationDialog" target="vilij.components.ConfirmationDialog" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vilij.components.ConfirmationDialog" target="vilij.components.Dialog"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="vilij.components.ErrorDialog" target="vilij.components.Dialog"/>
+    <UseRelation source="vilij.components.ErrorDialog" target="vilij.components.ErrorDialog" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

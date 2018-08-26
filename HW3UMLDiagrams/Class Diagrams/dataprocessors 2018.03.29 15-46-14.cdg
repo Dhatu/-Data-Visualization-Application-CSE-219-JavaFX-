@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="dataprocessors">
+  <ClassDiagramComponents>
+    <Class name="AppData" package="dataprocessors" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="processor" type="TSDProcessor" visibility="private"/>
+        <Field name="applicationTemplate" type="ApplicationTemplate" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getProcessor" returnType="TSDProcessor" visibility="public"/>
+        <Method name="loadData" returnType="void" visibility="public">
+          <Argument type="Path" name="dataFilePath"/>
+        </Method>
+        <Method name="loadData" returnType="void" visibility="public">
+          <Argument type="String" name="dataString"/>
+        </Method>
+        <Method name="saveData" returnType="void" visibility="public">
+          <Argument type="Path" name="dataFilePath"/>
+        </Method>
+        <Method name="clear" returnType="void" visibility="public"/>
+        <Method name="displayData" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TSDProcessor" package="dataprocessors" visibility="public" isFinal="true" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="dataLabels" type="Map&lt;String, String&gt;" visibility="private"/>
+        <Field name="counter" type="int" visibility="private"/>
+        <Field name="dataPoints" type="Map&lt;String, Point2D&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCounter" returnType="int" visibility="public"/>
+        <Method name="getDataLabels" returnType="Map&lt;String, String&gt;" visibility="public"/>
+        <Method name="getDataPoints" returnType="Map&lt;String, Point2D&gt;" visibility="public"/>
+        <Method name="processString" returnType="void" visibility="public">
+          <Argument type="String" name="tsdString"/>
+        </Method>
+        <Method name="toChartData" returnType="void" visibility="package">
+          <Argument type="XYChart&lt;Number, Number&gt;" name="chart"/>
+        </Method>
+        <Method name="clear" returnType="void" visibility="package">
+          <Argument type="XYChart&lt;Number, Number&gt;" name="chart"/>
+        </Method>
+        <Method name="checkedname" returnType="String" visibility="private">
+          <Argument type="String" name="name"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="processor" source="dataprocessors.AppData" target="dataprocessors.TSDProcessor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="dataprocessors.AppData" target="dataprocessors.TSDProcessor" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

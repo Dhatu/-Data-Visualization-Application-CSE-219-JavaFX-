@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ui">
+  <ClassDiagramComponents>
+    <Class name="AppUI" package="ui" visibility="public" isFinal="true" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="applicationTemplate" type="ApplicationTemplate" visibility="package"/>
+        <Field name="dataFilePath" type="Path" visibility="package"/>
+        <Field name="scrnshotButton" type="Button" visibility="private"/>
+        <Field name="readonlyButton" type="Button" visibility="private"/>
+        <Field name="undoreadonlyButton" type="Button" visibility="private"/>
+        <Field name="scrnshotPath" type="String" visibility="private"/>
+        <Field name="readonlyPath" type="String" visibility="private"/>
+        <Field name="chart" type="ScatterChart&lt;Number, Number&gt;" visibility="private"/>
+        <Field name="displayButton" type="Button" visibility="private"/>
+        <Field name="textArea" type="TextArea" visibility="private"/>
+        <Field name="hasNewText" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getScrnshotButton" returnType="Button" visibility="public"/>
+        <Method name="getTextArea" returnType="TextArea" visibility="public"/>
+        <Method name="setDisable" returnType="void" visibility="public"/>
+        <Method name="getChart" returnType="ScatterChart&lt;Number, Number&gt;" visibility="public"/>
+        <Method name="setResourcePaths" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="setToolBar" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="setToolbarHandlers" returnType="void" visibility="protected">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Method>
+        <Method name="initialize" returnType="void" visibility="public"/>
+        <Method name="clear" returnType="void" visibility="public"/>
+        <Method name="layout" returnType="void" visibility="private"/>
+        <Method name="setWorkspaceActions" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="DataVisualizer" package="ui" visibility="public" isFinal="true" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="propertyAudit" returnType="boolean" visibility="protected"/>
+        <Method name="userInterfaceAudit" returnType="void" visibility="protected">
+          <Argument type="Stage" name="primaryStage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

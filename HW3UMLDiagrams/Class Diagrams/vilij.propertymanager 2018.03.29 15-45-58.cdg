@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="vilij.propertymanager">
+  <ClassDiagramComponents>
+    <Class name="PropertyManager" package="vilij.propertymanager" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="xmlUtilities" type="XMLUtilities" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="propertyManager" type="PropertyManager" visibility="private" isStatic="true"/>
+        <Field name="properties" type="Map&lt;String, String&gt;" visibility="private"/>
+        <Field name="propertyOptions" type="Map&lt;String, List&lt;String&gt;&gt;" visibility="private"/>
+        <Field name="PROPERTY_ELEMENT" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="PROPERTY_LIST_ELEMENT" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="PROPERTY_OPTIONS_LIST_ELEMENT" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="PROPERTY_OPTIONS_ELEMENT" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="OPTION_ELEMENT" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="NAME_ATTRIBUTE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="VALUE_ATTRIBUTE" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="PROPERTIES_RESOURCE_RELATIVE_PATH" type="String" visibility="public" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getManager" returnType="PropertyManager" visibility="public" isStatic="true"/>
+        <Method name="addProperty" returnType="void" visibility="public">
+          <Argument type="String" name="property"/>
+          <Argument type="String" name="value"/>
+        </Method>
+        <Method name="getPropertyValue" returnType="String" visibility="public">
+          <Argument type="String" name="property"/>
+        </Method>
+        <Method name="getPropertyValueAsInt" returnType="int" visibility="public">
+          <Argument type="String" name="property"/>
+        </Method>
+        <Method name="getPropertyValueAsBoolean" returnType="boolean" visibility="public">
+          <Argument type="String" name="property"/>
+        </Method>
+        <Method name="addPropertyOption" returnType="void" visibility="public">
+          <Argument type="String" name="property"/>
+          <Argument type="String" name="option"/>
+        </Method>
+        <Method name="getPropertyOptions" returnType="List&lt;String&gt;" visibility="public">
+          <Argument type="String" name="property"/>
+        </Method>
+        <Method name="hasProperty" returnType="boolean" visibility="public">
+          <Argument type="Object" name="property"/>
+        </Method>
+        <Method name="loadProperties" returnType="void" visibility="public">
+          <Argument type="Class" name="klass"/>
+          <Argument type="String" name="xmlfilename"/>
+          <Argument type="String" name="schemafilename"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="propertyManager" source="vilij.propertymanager.PropertyManager" target="vilij.propertymanager.PropertyManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="vilij.propertymanager.PropertyManager" target="vilij.propertymanager.PropertyManager" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

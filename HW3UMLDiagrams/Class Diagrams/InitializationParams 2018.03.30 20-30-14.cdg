@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="InitializationParams">
+  <ClassDiagramComponents>
+    <Enum name="InitializationParams" package="vilij.settings" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Literals>
+        <Literal name="LOAD_ERROR_TITLE"/>
+        <Literal name="PROPERTIES_LOAD_ERROR_MESSAGE"/>
+        <Literal name="PROPERTIES_XML"/>
+        <Literal name="WORKSPACE_PROPERTIES_XML"/>
+        <Literal name="SCHEMA_DEFINITION"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ActionComponent">
+  <ClassDiagramComponents>
+    <Interface name="ActionComponent" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="handleNewRequest" returnType="void" visibility="package"/>
+        <Method name="handleSaveRequest" returnType="void" visibility="package"/>
+        <Method name="handleLoadRequest" returnType="void" visibility="package"/>
+        <Method name="handleExitRequest" returnType="void" visibility="package"/>
+        <Method name="handlePrintRequest" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

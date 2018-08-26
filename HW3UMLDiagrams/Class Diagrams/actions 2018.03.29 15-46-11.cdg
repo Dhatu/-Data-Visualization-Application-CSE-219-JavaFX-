@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="actions">
+  <ClassDiagramComponents>
+    <Class name="AppActions" package="actions" visibility="public" isFinal="true" xPosition="255.0" yPosition="197.0">
+      <Fields>
+        <Field name="applicationTemplate" type="ApplicationTemplate" visibility="private"/>
+        <Field name="dataFilePath" type="Path" visibility="package"/>
+        <Field name="dialogStage" type="Window" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ApplicationTemplate" name="applicationTemplate"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Window" name="dialogStage"/>
+        </Method>
+        <Method name="handleNewRequest" returnType="void" visibility="public"/>
+        <Method name="handleSaveRequest" returnType="void" visibility="public"/>
+        <Method name="handleLoadRequest" returnType="void" visibility="public"/>
+        <Method name="handleExitRequest" returnType="void" visibility="public"/>
+        <Method name="handlePrintRequest" returnType="void" visibility="public"/>
+        <Method name="handleScreenshotRequest" returnType="void" visibility="public"/>
+        <Method name="promptToSave" returnType="boolean" visibility="private"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

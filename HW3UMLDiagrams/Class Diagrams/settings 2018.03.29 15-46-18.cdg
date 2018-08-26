@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="settings">
+  <ClassDiagramComponents>
+    <Enum name="AppPropertyTypes" package="settings" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Literals>
+        <Literal name="DATA_RESOURCE_PATH"/>
+        <Literal name="SCREENSHOT_ICON"/>
+        <Literal name="SCREENSHOT_TOOLTIP"/>
+        <Literal name="READONLY_TOOLTIP"/>
+        <Literal name="RESOURCE_SUBDIR_NOT_FOUND"/>
+        <Literal name="SAVE_UNSAVED_WORK_TITLE"/>
+        <Literal name="SAVE_UNSAVED_WORK"/>
+        <Literal name="DATA_FILE_EXT"/>
+        <Literal name="DATA_FILE_EXT_DESC"/>
+        <Literal name="TEXT_AREA"/>
+        <Literal name="SPECIFIED_FILE"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

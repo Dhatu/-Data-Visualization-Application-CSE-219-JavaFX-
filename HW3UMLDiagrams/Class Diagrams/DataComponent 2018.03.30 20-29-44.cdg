@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DataComponent">
+  <ClassDiagramComponents>
+    <Interface name="DataComponent" package="vilij.components" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="loadData" returnType="void" visibility="package">
+          <Argument type="Path" name="dataFilePath"/>
+        </Method>
+        <Method name="saveData" returnType="void" visibility="package">
+          <Argument type="Path" name="dataFilePath"/>
+        </Method>
+        <Method name="clear" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>
